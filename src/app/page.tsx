@@ -62,7 +62,7 @@ export default function Home() {
     e.preventDefault();
     alert('Generating your PDF... This may take a moment.');
 
-    const webhookUrl = 'https://hasham03.app.n8n.cloud/webhook/6c51e5bd-3845-4017-a101-dde203a9c0c7'; 
+    const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL as string;
 
     try {
       const response = await fetch(webhookUrl, {
