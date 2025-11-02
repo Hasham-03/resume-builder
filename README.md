@@ -63,7 +63,7 @@ A modern, web-based **Resume Builder** that allows users to easily create, custo
 
 ## 🌍 Live Demo  
 
-🔗 [Resume Builder Website](https://main.dtytdzyec2pcz.amplifyapp.com/)  
+🔗 [Resume Builder Website](https://share.google/kunL76Bvq0HtMIvbR)  
 
 ---
 
