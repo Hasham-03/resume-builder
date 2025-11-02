@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧾 Resume Builder Website  
 
-## Getting Started
+A modern, web-based **Resume Builder** that allows users to easily create, customize, and download professional resumes. The application combines a sleek **Next.js frontend** with a secure, containerized **AWS backend** for automated PDF generation and data handling.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Interactive Editor:** Build and preview resumes live.  
+- **Professional Templates:** Choose from customizable designs.  
+- **Instant PDF Download:** Generate print-ready resumes in seconds.  
+- **Auto Save:** Keeps user progress safe.  
+- **Cloud-Hosted:** Scalable and secure AWS infrastructure.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗️ Architecture Overview  
 
-## Learn More
+**Frontend:**  
+- Developed with **Next.js** and **Tailwind CSS**.  
+- Deployed on **AWS Amplify** for CI/CD and global hosting.  
 
-To learn more about Next.js, take a look at the following resources:
+**Backend:**  
+- Runs on **AWS EC2 (Ubuntu)** with **Dockerized n8n** backend for automation and PDF generation.  
+- **Caddy Server** configured as a reverse proxy for **HTTPS** and routing.  
+- Handles secure API requests from frontend and returns generated PDFs.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧰 Tech Stack  
 
-## Deploy on Vercel
+| Layer | Technologies |
+|--------|---------------|
+| Frontend | Next.js, Tailwind CSS |
+| Backend | n8n (Node.js), Docker, Ubuntu |
+| Hosting | AWS EC2, AWS Amplify |
+| Proxy | Caddy (HTTPS & Reverse Proxy) |
+| Version Control | Git, GitHub |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ Deployment Summary  
+
+1. **Frontend Deployment**  
+   - Push the Next.js code to GitHub.  
+   - Connect to **AWS Amplify** for auto build and deployment.  
+
+2. **Backend Setup**  
+   - Launch **EC2 Ubuntu** instance (t2.micro or t3.micro).  
+   - Install **Docker** and run the n8n backend container.  
+   - Configure **Caddy** for HTTPS reverse proxy.  
+   - Open ports `80`, `443`, and backend API port (`5678`) in AWS Security Groups.  
+
+---
+
+## 🔒 Security Highlights  
+
+- HTTPS enabled using **Caddy auto TLS**.  
+- Access restricted with **AWS Security Groups**.  
+- Sensitive credentials stored as environment variables.  
+
+---
+
+## 🌍 Live Demo  
+
+🔗 [Resume Builder Website](https://main.dtytdzyec2pcz.amplifyapp.com/)  
+
+---
+
+## 📜 License  
+
+Released under the **MIT License**. Feel free to use or modify it.  
+
+---
+
+## 👤 Author  
+
+**Mohammed Hashim**  
+💼 Cloud & Full Stack Developer  
+📎 [GitHub Profile](https://github.com/Hasham-03)
